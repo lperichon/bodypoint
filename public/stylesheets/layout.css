@@ -1,0 +1,138 @@
+/* I D E N T I F I C A D O R */
+.pic p, .caption {
+  font-size: 11px;
+  line-height: 16px;
+  font-family: Verdana, Arial, sans-serif;
+  color: #666;
+  margin: 4px 0 10px;
+}
+
+/* U B I C A C I O N */
+.iz {
+  float: left;
+}
+
+.iz.margen {
+  float: left;
+  margin-right: 20px;
+}
+
+.iz.inset {
+  margin-left: 230px;
+}
+
+/* img flotada a la derecha dentro del texto */
+.de {
+  float: right;
+}
+
+.de.margen {
+  float: right;
+  margin-left: 20px;
+}
+
+.de.inset {
+  margin: 0 120px 0 20px;
+}
+
+/* img flotada a la derecha dentro del texto */
+
+/* T A M A Ñ O */
+.uno {
+  width: 96px;
+}
+
+.dos {
+  width: 192px;
+}
+
+.tres {
+  width: 288px;
+}
+
+.cuatro {
+  width: 384px;
+}
+
+.cinco {
+  width: 480px;
+}
+
+.seis {
+  width: 576px;
+}
+
+.siete {
+  width: 672px;
+}
+
+.ocho {
+  width: 768px;
+}
+
+.nueve {
+  width: 864px;
+}
+
+.diez {
+  width: 960px;
+}
+
+/* M A R G E N E S */
+.margen10 {
+  width: 10px;
+}
+
+.margen20 {
+  width: 20px;
+}
+
+.margen30 {
+  width: 30px;
+}
+
+.pad10 {
+  padding: 10px;
+}
+
+.pad20 {
+  padding: 20px;
+}
+
+.pad30 {
+  padding: 30px;
+}
+
+/* A G R E G A D O S */
+.marco {
+  border: 1px solid #999;
+}
+
+.solo.img {
+  margin-bottom: 20px;
+}
+
+.centro {
+  margin: 0 auto;
+}
+
+/* C O L O R */
+.rojo {
+  background-color: red;
+}
+
+.verde {
+  background-color: green;
+}
+
+.azul {
+  background-color: blue;
+}
+
+.amarillo {
+  background-color: yellow;
+}
+
+.naranja {
+  background-color: orange;
+}

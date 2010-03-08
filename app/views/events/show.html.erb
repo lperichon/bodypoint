@@ -1,0 +1,23 @@
+<p>
+  <b>Activity:</b>
+  <%=h @event.activity_id %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @event.location_id %>
+</p>
+
+<p>
+  <b>Day of Week:</b>
+  <%=h @event.day_of_week %>
+</p>
+
+<p>
+  <b>Happens at:</b>
+  <%=h @event.happens_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_activity_event_path(@activity, @event) %> |
+<%= link_to 'Back', activity_events_path(@activity) %>

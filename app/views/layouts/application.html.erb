@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+  <title>BODYPOINT | GYM &#38; FITNESS</title>
+  <LINK REL=StyleSheet HREF="/stylesheets/reset.css" TYPE="text/css" MEDIA=screen>
+  <LINK REL=StyleSheet HREF="/stylesheets/text.css" TYPE="text/css" MEDIA=screen>
+  <LINK REL=StyleSheet HREF="/stylesheets/layout.css" TYPE="text/css" MEDIA=screen>
+  <LINK REL=StyleSheet HREF="/stylesheets/style2.css" TYPE="text/css" MEDIA=screen>
+  <LINK REL=StyleSheet HREF="/stylesheets/menu.css" TYPE="text/css" MEDIA=screen>
+  <%= stylesheet_link_tag('formtastic') %>
+  <%= stylesheet_link_tag('formtastic_changes') %>
+</head>
+
+<body>
+
+<div id="canvas">
+  <div id="header_zone">
+    <div id="logo_area">
+      <div id="logo_frame">
+      </div>
+    </div>
+    <div id="menu_area">
+      <div id="menu_frame">
+        <ul id="menu">
+          <%= content_tag :li, link_to('Inicio', page_path('index')), :class => (current_page_is?('index') || current_page?(root_path)) ? 'select' : nil %>
+          <%= content_tag :li, link_to('Sede', page_path('sede')), :class => current_page_is?('sede') ? 'select' : nil %>
+          <%= content_tag :li, link_to('Actividades', activities_path), :class => controller.controller_name == 'activities' ? 'select' : nil %>
+          <li><a href="#" title="">Spa-Relax</a></li>
+          <%= content_tag :li, link_to('Blog', blog_path), :class => (current_page?(blog_path) || controller.controller_name == 'posts') ? 'select' : nil %>
+          <%= content_tag :li, link_to('Contacto', new_contact_form_path), :class => current_page?(new_contact_form_path) ? 'select' : nil %>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div id="main_zone">
+    <div id="main_leftarea">
+      <div id="news_frame">
+        <div id="news_header">
+        </div>
+        <div id="news_border">
+        </div>
+        <div id="news_content">
+          <ul>
+            <% @latest_posts.each do |post| %>
+            <%= content_tag :li, link_to( post.subject, post_path(post)) %>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div id="sidebar_frame">
+        <div id="inscribite_side" class="promobutton_side">
+          <h3>INSCRIBITE</h3>
+        </div>
+        <div id="promo_side" class="sidead">
+        </div>
+      </div>
+      <div id="leftarea_foot">
+      </div>
+    </div>
+    <div id="main_midarea">
+      <div class="fullbox_head">
+      </div>
+      <div class="fullbox_body">
+        <div id="content_frame" class="sede content">
+          <%= yield %>
+        </div>
+      </div>
+      <div class="fullbox_foot">
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

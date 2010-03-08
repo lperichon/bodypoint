@@ -1,0 +1,33 @@
+<% locations.each do |location| %>
+  <h2><%= location.name %></h2>
+  <table>
+    <tr>
+      <th>Hora</th>
+      <th>Domingo</th>
+      <th>Lunes</th>
+      <th>Martes</th>
+      <th>Miercoles</th>
+      <th>Jueves</th>
+      <th>Viernes</th>
+      <th>Sabado</th>
+    </tr>
+    <% events_by_hour = location.events.group_by { |e| e.happens_at.hour} %>
+    <% (9..20).each do |hour| %>
+      <tr>
+        <td><%= hour %></td>
+        <% if events_by_hour[hour] %>
+        <% events_by_dow = events_by_hour[hour].group_by(&:day_of_week) %>
+        <% (0..7).each do |i| %>
+          <td>
+            <% if events_by_dow[i] %>
+              <% events_by_dow[i].each do |event| %>
+                <%= event.activity.name %><br/>
+              <% end %>
+            <% end %>
+          </td>
+        <% end %>
+        <% end %>
+      </tr>
+    <% end %>
+  </table>
+<% end %>

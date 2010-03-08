@@ -1,0 +1,20 @@
+<p>
+  <b>Name:</b>
+  <%=h @activity.name %>
+</p>
+
+<p>
+  <b>Instructor name:</b>
+  <%=h @activity.instructor_name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @activity.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_activity_path(@activity) %> |
+<%= link_to 'Events', activity_events_path(@activity) %> |
+<%= link_to 'Destroy', @activity, :confirm => 'Are you sure?', :method => :delete %> |
+<%= link_to 'Back', activities_path %>

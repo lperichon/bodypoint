@@ -1,0 +1,8 @@
+<% semantic_form_for [@activity, @event] do |f| %>
+  <% f.inputs do%>
+    <%= f.input :location %>
+    <%= f.input :day_of_week, :as => :select, :collection => (0..6).inject([]) {|array, dow| array << [t('date.day_names')[dow], dow]} %>
+    <%= f.input :happens_at %>
+  <% end %>
+  <%= f.buttons %>
+<% end %>
