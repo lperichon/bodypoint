@@ -1,9 +1,14 @@
-<%= form.error_messages %>
-<div class="text_field">
-  <%= form.label :subject %>
-  <%= form.text_field :subject %>
-</div>
-<div class="text_area_field">
-  <%= form.label :body %>
-  <%= form.text_area :body %>
-</div>
+<% semantic_form_for @post do |form| %>
+  <% form.inputs do %>
+    <%= form.input :subject %>
+    <%= form.input :body %>
+  <% end %>
+  <% form.buttons do %>
+    <%= form.commit_button %>
+    <% if controller.action_name == 'edit' %>
+      <li><%= link_to 'Cancelar', post_path(@post) %></li>
+    <% else %>
+      <li><%= link_to 'Cancelar', blog_path %></li>
+    <% end %>
+  <% end %>
+<% end %>
