@@ -1,0 +1,7 @@
+config/database.yml
+db/*.sql*
+tmp/*
+log/*.log
+.idea
+*~
+public/system/**/*
