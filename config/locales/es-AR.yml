@@ -135,6 +135,26 @@
         separator: ","
         delimiter: "."
   activerecord:
+    models:
+      event: Evento
+      activity: Actividad
+      location: Locación
+      post: Post
+    attributes:
+      event:
+        activity: Actividad
+        location: Locación
+        day_of_week: Día
+        happens_at: Hora
+      activity:
+        name: Nombre
+        instructor_name: Instructor
+        description: Descripción
+      location:
+        name: Nombre
+      post:
+        subject: Título
+        body: Cuerpo
     errors:
       template:
         header:
@@ -179,3 +199,7 @@
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'
+  formtastic:
+    actions:
+      create: "Crear {{model}}"
+      update: "Actualizar {{model}}"

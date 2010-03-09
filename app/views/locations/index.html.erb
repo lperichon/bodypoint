@@ -1,20 +1,20 @@
-<h1>Listing locations</h1>
+<h1>Listando locaciones</h1>
 
 <table>
   <tr>
-    <th>Name</th>
+    <th>Nombre</th>
   </tr>
 
 <% @locations.each do |location| %>
   <tr>
     <td><%=h location.name %></td>
-    <td><%= link_to 'Show', location %></td>
-    <td><%= link_to 'Edit', edit_location_path(location) %></td>
-    <td><%= link_to 'Destroy', location, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Ver', location %></td>
+    <td><%= link_to 'Editar', edit_location_path(location) %></td>
+    <td><%= link_to 'Eliminar', location, :confirm => 'Esta seguro?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New location', new_location_path %>
+<%= link_to 'Nueva locación', new_location_path %>

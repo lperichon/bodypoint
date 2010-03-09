@@ -1,23 +1,23 @@
 <p>
-  <b>Activity:</b>
-  <%=h @event.activity_id %>
+  <b>Actividad:</b>
+  <%=h @event.activity.name %>
 </p>
 
 <p>
-  <b>Location:</b>
-  <%=h @event.location_id %>
+  <b>Locacion:</b>
+  <%=h @event.location.name %>
 </p>
 
 <p>
-  <b>Day of Week:</b>
-  <%=h @event.day_of_week %>
+  <b>Dia de la semana:</b>
+  <%=h t('date.day_names')[@event.day_of_week] %>
 </p>
 
 <p>
-  <b>Happens at:</b>
-  <%=h @event.happens_at %>
+  <b>Hora:</b>
+  <%=h @event.happens_at.strftime('%H:%M') %>
 </p>
 
 
-<%= link_to 'Edit', edit_activity_event_path(@activity, @event) %> |
-<%= link_to 'Back', activity_events_path(@activity) %>
+<%= link_to 'Editar', edit_activity_event_path(@activity, @event) %> |
+<%= link_to 'Atras', activity_events_path(@activity) %>
