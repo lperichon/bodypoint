@@ -140,7 +140,12 @@
       activity: Actividad
       location: Locación
       post: Post
+      user_session: Sesión de Usuario
     attributes:
+      user_session:
+        login: Usuario
+        password: Contraseña
+        remember_me: Recordarme
       event:
         activity: Actividad
         location: Locación

@@ -19,6 +19,7 @@ Rails::Initializer.run do |config|
   # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
   # config.gem "sqlite3-ruby", :lib => "sqlite3"
   # config.gem "aws-s3", :lib => "aws/s3"
+  config.gem "authlogic", :version => '2.1.3'
   config.gem 'formtastic', :version => '0.9.7'
   config.gem 'simple_form', :version => '0.4'
   config.gem 'inherited_resources', :version => '1.0'

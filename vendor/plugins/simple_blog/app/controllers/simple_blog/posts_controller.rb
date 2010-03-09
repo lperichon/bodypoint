@@ -1,4 +1,5 @@
 class SimpleBlog::PostsController < ApplicationController
+  unloadable
   layout 'application'
   
   def index

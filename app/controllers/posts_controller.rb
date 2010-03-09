@@ -1,5 +1,6 @@
 class PostsController < SimpleBlog::PostsController
   before_filter :navigation
+  before_filter :require_user, :except => [:show, :index]
 
   def navigation
     @posts ||= Post.all
