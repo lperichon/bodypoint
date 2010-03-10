@@ -8,13 +8,16 @@
   <% end %>
 </ul>
 <% end %>
-<ul class="actions">
-  <li class='first'><%= link_to 'nuevo', new_post_path %></li>
-  <% unless post.new_record? %>
-  <li><%= link_to 'ver', post_path(post) %></li>
-  <li><%= link_to 'editar', edit_post_path(post)%></li>
-  <li><%= link_to 'eliminar', post_path(post), :method => :delete, :confirm => 'Esta seguro?' %></li>
-  <% end %>
-</ul>
+<% if current_user %>
+  <ul class="actions">
+    <li class='first'><%= link_to 'nuevo', new_post_path %></li>
+    <% unless post.new_record? %>
+      <li><%= link_to 'ver', post_path(post) %></li>
+      <li><%= link_to 'editar', edit_post_path(post)%></li>
+      <li><%= link_to 'eliminar', post_path(post), :method => :delete, :confirm => 'Esta seguro?' %></li>
+      <li><%= link_to 'salir', logout_path, :method => :delete, :confirm => 'Esta seguro?' %></li>
+    <% end %>
+  </ul>
+<% end %>
 <h1><%= h post.subject %></h1>
 <%= post.body %>

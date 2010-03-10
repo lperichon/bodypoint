@@ -1,7 +1,10 @@
 <%= render :partial => 'locations/list', :locals => {:locations => Location.all} %>
 
-<%= link_to 'Administrar locaciones', locations_path %>
-<br/><br/>
+<% if current_user %>
+  <%= link_to 'Administrar locaciones', locations_path %>
+  <br/>
+<% end %>
+<br/>
 
 <ul>
 <% @activities.each do |activity| %>
@@ -9,4 +12,6 @@
 <% end %>
 </ul>
 
-<%= link_to 'Nueva actividad', new_activity_path %>
+<% if current_user %>
+  <%= link_to 'Nueva actividad', new_activity_path %>
+<% end %>

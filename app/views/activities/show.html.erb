@@ -13,8 +13,9 @@
   <%=h @activity.description %>
 </p>
 
-
+<% if current_user %>
 <%= link_to 'Editar', edit_activity_path(@activity) %> |
 <%= link_to 'Eventos', activity_events_path(@activity) %> |
 <%= link_to 'Eliminar', @activity, :confirm => 'Esta seguro?', :method => :delete %> |
+<% end %>
 <%= link_to 'Atras', activities_path %>
