@@ -1,0 +1,61 @@
+#controls {
+  position: relative;
+  height: 2em;
+}
+ul.navigation {
+  position: absolute;
+  list-style: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+ul.navigation li{
+  display:inline;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul.navigation li.previous {
+  width: 1.5em;
+  text-indent: -9999px;
+  margin-left: 1em;
+}
+
+ul.navigation li.previous a {
+  background: transparent url("../images/previous.png") no-repeat;
+  display: inline-block;
+  width: 1.5em;
+}
+
+ul.navigation li.next {
+  width: 1.5em;
+  margin-left: 45.5em;
+  text-indent: -9999px;
+}
+
+ul.navigation li.next a {
+  background: transparent url("../images/next.png") no-repeat;
+  display: inline-block;
+  width: 1.5em;
+}
+
+ul.actions {
+  position: absolute;
+  width: 38em;
+  text-align: center;
+  list-style: none;
+  overflow: auto;
+  margin: 0 0 0 5em;
+  padding: 0;
+}
+
+ul.actions li {
+  display: inline;
+  padding-left: 0.3em;
+}
+ul.actions li.first {
+  border-left: 0;
+  padding-left: 0;
+}

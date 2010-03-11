@@ -1,23 +1,31 @@
-<% unless @previous_post.blank? && @next_post.blank? %>
-<ul class='navigation'>
-  <% unless @previous_post.blank? %>
-  <li class='previous'><%= link_to 'Anterior', post_path(@previous_post) %></li>
-  <% end %>
-  <% unless @next_post.blank? %>
-  <li class='next'><%= link_to 'Siguiente', post_path(@next_post) %></li>
-  <% end %>
-</ul>
-<% end %>
-<% if current_user %>
-  <ul class="actions">
-    <li class='first'><%= link_to 'nuevo', new_post_path %></li>
-    <% unless post.new_record? %>
-      <li><%= link_to 'ver', post_path(post) %></li>
-      <li><%= link_to 'editar', edit_post_path(post)%></li>
-      <li><%= link_to 'eliminar', post_path(post), :method => :delete, :confirm => 'Esta seguro?' %></li>
-      <li><%= link_to 'salir', logout_path, :method => :delete, :confirm => 'Esta seguro?' %></li>
+<div id='controls'>
+  <% unless @previous_post.blank? && @next_post.blank? %>
+  <ul class='navigation'>
+    <li class='previous'>
+    <% if @previous_post.blank? %>
+      &nbsp &nbsp &nbsp
+    <% else %>
+    <%= link_to 'Anterior', post_path(@previous_post) %>
     <% end %>
+    </li>
+    <li class='next'>
+    <% unless @next_post.blank? %>
+    <%= link_to 'Siguiente', post_path(@next_post) %>
+    <% end %>
+    </li>
   </ul>
-<% end %>
+  <% end %>
+  <% if current_user %>
+    <ul class="actions">
+      <li class='first'><%= link_to 'nuevo', new_post_path %></li>
+      <% unless post.new_record? %>
+        <li><%= link_to 'ver', post_path(post) %></li>
+        <li><%= link_to 'editar', edit_post_path(post)%></li>
+        <li><%= link_to 'eliminar', post_path(post), :method => :delete, :confirm => 'Esta seguro?' %></li>
+        <li><%= link_to 'salir', logout_path, :method => :delete, :confirm => 'Esta seguro?' %></li>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
 <h1><%= h post.subject %></h1>
 <%= post.body %>
