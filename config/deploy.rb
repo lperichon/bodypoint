@@ -46,5 +46,6 @@ namespace :deploy do
     run "cp -pf #{deploy_to}/to_copy/database.yml #{current_path}/config/database.yml"
     run "ln -s #{deploy_to}/shared/vendor/rails #{current_path}/vendor/rails"
     run "ln -s #{deploy_to}/shared/vendor/gems #{current_path}/vendor/gems"
+    run "ln -s #{deploy_to}/userfiles #{current_path}/public/userfiles"
   end
 end
