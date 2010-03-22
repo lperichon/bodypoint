@@ -1,0 +1,12 @@
+<h2>Registro</h2>
+<% semantic_form_for SignupForm.new, :url => signup_form_path do |f| %>
+  <% f.inputs do %>
+    <%= f.input :name, :label => 'Nombre y apellido' %>
+    <%= f.input :email, :label => 'Email' %>
+    <%= f.input :telephone, :label => 'Teléfono' %>
+  <% end %>
+  <p class='required_field_note'>* Campo Requerido</p>
+  <% f.buttons do %>
+     <%= f.commit_button 'Enviar' %>
+  <% end %>
+<% end %>

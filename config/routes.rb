@@ -13,6 +13,8 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :pages
 
+  map.resource :signup_form
+
   map.resource :contact_form
 
   map.resources :posts

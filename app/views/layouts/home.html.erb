@@ -55,7 +55,7 @@
       <div id="bottom_mainarea" class="verde">
         <div id="bottom_leftframe">
           <div id="inscribite" class="promobutton">
-            <h3>INSCRIBITE</h3>
+            <h3><%= link_to_function 'INSCRIBITE', "$('#step1').hide();$('#step2').show();" %></h3>
           </div>
           <div id="comenza" class="promobutton">
             <h3>COMENZA</h3>
@@ -65,6 +65,7 @@
           </div>
         </div>
         <div id="bottom_mainframe">
+          <span id='step1'>
           <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula elit, congue id egestas ac,
             scelerisque rutrum erat. Sed pellentesque magna lobortis nisi fermentum ultricies. Nam luctus urna non nulla
             euismod porttitor. Maecenas sit amet odio nec elit placerat semper. Sed aliquet adipiscing tellus nec
@@ -74,6 +75,10 @@
             arcu, eu dictum arcu. Fusce bibendum tempor nisl, non viverra felis pharetra in. Donec eu enim urna. Donec
             convallis nunc velit, eget ultrices eros. Donec eget elit risus, nec pulvinar neque. Maecenas arcu diam,
             euismod a pellentesque quis, malesuada ut ligula.</p>
+          </span>
+          <span id='step2' style='display:none'>
+            <%= render :partial => 'signup_forms/form' %>
+          </span>
         </div>
       </div>
       <div id="bottomzone_footer">

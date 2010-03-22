@@ -184,3 +184,13 @@ background: #f1f1f1 url(/images/background.jpg) no-repeat;
 	background-image: url('/images/mainmid.png');
 	background-color:none;
 }
+
+#step1 {
+  position: absolute;
+  width: 687px;
+}
+
+#step2 {
+  position: absolute;
+  width: 687px;
+}
