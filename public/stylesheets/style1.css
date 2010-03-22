@@ -1,0 +1,186 @@
+body {
+background: #f1f1f1 url(/images/background.jpg) no-repeat;
+}
+
+#header_zone {
+	width: 956px;
+	height: 90px;
+	background-image:url('/images/header_back.jpg');
+	background-color:#ffcb15;
+	margin-top: 50px;
+	margin-left:109px
+}
+
+#logo_area {
+	float:left;
+	width:279px;
+	height:80px;
+	padding-top:10px;
+	margin-right:0px;
+}
+
+#logo_frame {
+	width:279px;
+	height: 64px;
+	background-image:url('/images/logo.png');
+}
+
+#menu_area {
+	float:left;
+	width:644px;
+	height:57px;
+	padding-top:33px;
+	padding-left:32px;
+}
+
+#main_zone {
+	width: 956px;
+	height: 348px;
+	margin-top:17px;
+	margin-left:109px;
+}
+
+#main_leftarea {
+	float:left;
+	width:237px;
+	height: 346px;
+}
+
+#news_frame {
+	width:237px;
+	height:346px;
+	margin-bottom:18px;
+}
+
+#news_header {
+	width:237px;
+	height:47px;
+	background-image: url('/images/newsheader.png');
+}
+
+#news_border {
+	float:left;
+	width:7px;
+	height:299px;
+	background-color: transparent;
+}
+
+#news_frame {
+	float:left;
+	width:230px;
+	height: 289px;
+	padding-top:10px;
+	background-image: url('/images/newsback.jpg');
+}
+
+#sidebar_frame {
+	width:230px;
+	height:306px;
+	margin-left:7px;
+	margin-bottom:20px;
+	padding-top:6px;
+	background-image: url('/images/sideback.jpg');
+	background-color:red;
+}
+
+#intro_frame p {
+	text-align:justify;
+	font-size:12px;
+}
+
+#intro_frame p span {
+	text-align:left;
+	font-weight:bold;
+}
+
+#main_rightarea {
+	float:left;
+	width:232px;
+	height: 348px;
+	margin-left:13px;
+	background-image: url('/images/flashreplace.png');
+	background-repeat: no-repeat;
+	background-color:none;
+}
+
+#bottom_zone {
+	width: 956px;
+	margin-left:109px;
+	margin-top:17px;
+	/*background-image: url('/images/bottombox.png');
+	background-repeat: no-repeat;*/
+}
+
+#bottomzone_header {
+	width:936px;
+	height:29px;
+	padding-top:23px;
+	padding-left:20px;
+	color:white;
+	text-align:center;
+	background-image: url('/images/bottomheader.png');
+	background-repeat: no-repeat;
+}
+
+#bottomzone_container {
+	width:941px;
+	margin: 0px 7px;
+
+}
+
+#bottom_mainarea {
+	background-image: url('/images/bottomback.jpg');
+	background-repeat: no-repeat;
+	background-color:#ebe5e5;
+	overflow: auto;
+}
+
+#bottom_leftframe {
+	float:left;
+	margin-top:5px;
+}
+
+#bottom_mainframe {
+	float:left;
+	width:687px;
+	margin-top:12px;
+	margin-left:10px;
+	text-align:justify;
+}
+
+#bottomzone_footer {
+	width: 941px;
+	height: 12px;
+	margin-bottom: 20px;
+	background-image: url('/images/bottomfoot.png');
+}
+
+.promobutton {
+	width: 218px;
+	height: 52px;
+	padding-top:23px;
+/*	padding-left:48px;*/
+	margin-top:5px;
+	margin-left:16px;
+	text-align:center;
+	background-image: url('/images/promobutton.png');
+	color:#ff4e00;
+}
+
+#main_midarea {
+	float:left;
+	overflow: hidden;
+	width:420px;
+	margin-left:13px;
+	margin-bottom:20px;
+}
+
+.halfbox {
+	float:left;
+	width:420px;
+	height: 312px;
+	margin-left:13px;
+	padding: 20px 20px 15px 20px;
+	background-image: url('/images/mainmid.png');
+	background-color:none;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+
+<head>
+  <title>BODYPOINT | GYM &#38; FITNESS</title>
+  <script type="text/javascript" src="/javascripts/jquery-1.4.2.min.js"></script>
+  <LINK REL=StyleSheet HREF="/stylesheets/reset.css" TYPE="text/css" MEDIA=screen>
+  <LINK REL=StyleSheet HREF="/stylesheets/text.css" TYPE="text/css" MEDIA=screen>
+  <LINK REL=StyleSheet HREF="/stylesheets/layout.css" TYPE="text/css" MEDIA=screen>
+  <LINK REL=StyleSheet HREF="/stylesheets/style1.css" TYPE="text/css" MEDIA=screen>
+  <LINK REL=StyleSheet HREF="/stylesheets/menu.css" TYPE="text/css" MEDIA=screen>
+  <%= stylesheet_link_tag('formtastic') %>
+  <%= stylesheet_link_tag('formtastic_changes') %>
+</head>
+
+<body>
+
+<div id="canvas">
+  <div id="header_zone">
+    <div id="logo_area">
+      <div id="logo_frame">
+      </div>
+    </div>
+    <div id="menu_area">
+      <div id="menu_frame">
+        <%= render :partial => 'shared/menu' %>
+      </div>
+    </div>
+  </div>
+  <div id="main_zone">
+    <div id="main_leftarea">
+      <div id="news_header">
+      </div>
+      <div id="news_border">
+      </div>
+      <div id="news_frame">
+        <%= render :partial => 'shared/news' %>
+      </div>
+    </div>
+    <div id="main_midarea" class="halfbox">
+      <div id="intro_frame">
+        <%= yield %>
+      </div>
+    </div>
+    <div id="main_rightarea">
+      <img id="flash_replacer" src="/images/flashreplace.png" alt="Actividades" width="230px" height="342px"/>
+    </div>
+  </div>
+  <div id="bottom_zone">
+    <div id="bottomzone_header">
+      <h4>INSCRIBITE SIN COMPLICACIONES CON NUESTRO FORMULARIO ONLINE</h4>
+    </div>
+    <div id="bottomzone_container">
+      <div id="bottom_mainarea" class="verde">
+        <div id="bottom_leftframe">
+          <div id="inscribite" class="promobutton">
+            <h3>INSCRIBITE</h3>
+          </div>
+          <div id="comenza" class="promobutton">
+            <h3>COMENZA</h3>
+          </div>
+          <div id="disfruta" class="promobutton">
+            <h3>DISFRUTA</h3>
+          </div>
+        </div>
+        <div id="bottom_mainframe">
+          <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ligula elit, congue id egestas ac,
+            scelerisque rutrum erat. Sed pellentesque magna lobortis nisi fermentum ultricies. Nam luctus urna non nulla
+            euismod porttitor. Maecenas sit amet odio nec elit placerat semper. Sed aliquet adipiscing tellus nec
+            varius. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Suspendisse
+            auctor nunc at arcu laoreet porta. Sed et orci cursus dui adipiscing dapibus eget a enim. Nullam at ipsum
+            odio, ac luctus turpis. Praesent nisl nisi, placerat nec elementum in, porta at nunc. Suspendisse ac massa
+            arcu, eu dictum arcu. Fusce bibendum tempor nisl, non viverra felis pharetra in. Donec eu enim urna. Donec
+            convallis nunc velit, eget ultrices eros. Donec eget elit risus, nec pulvinar neque. Maecenas arcu diam,
+            euismod a pellentesque quis, malesuada ut ligula.</p>
+        </div>
+      </div>
+      <div id="bottomzone_footer">
+
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+
+</html>

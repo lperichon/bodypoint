@@ -1,0 +1,8 @@
+<ul id="menu">
+  <%= content_tag :li, link_to('Inicio', page_path('index')), :class => (current_page_is?('index') || current_page?(root_path)) ? 'select' : nil %>
+  <%= content_tag :li, link_to('Sede', page_path('sede')), :class => current_page_is?('sede') ? 'select' : nil %>
+  <%= content_tag :li, link_to('Actividades', activities_path), :class => controller.controller_name == 'activities' ? 'select' : nil %>
+  <%= content_tag :li, link_to('Spa-Relax', page_path('spa')), :class => current_page_is?('spa') ? 'select' : nil %>
+  <%= content_tag :li, link_to('Blog', blog_path), :class => (current_page?(blog_path) || controller.controller_name == 'posts') ? 'select' : nil %>
+  <%= content_tag :li, link_to('Contacto', new_contact_form_path), :class => current_page?(new_contact_form_path) ? 'select' : nil %>
+</ul>
