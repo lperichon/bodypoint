@@ -2,3 +2,23 @@
   <%= f.inputs %>
   <%= f.buttons %>
 <% end %>
+
+<script type="text/javascript">
+//<![CDATA[
+
+  CKEDITOR.replace( 'activity_description',
+    {
+      skin : 'kama',
+      language: 'es',
+      toolbar_Full: [['Cut','Copy','Paste','PasteText','PasteFromWord','-','SpellChecker', 'Scayt'], ['Undo','Redo','-','Find','Replace'], ['Image','Flash','Table','HorizontalRule','Smiley','SpecialChar'], ['Link','Unlink','Anchor'], ['TextColor','BGColor'], '/',
+                    ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'], ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'], ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'], ['Styles','Format'] ] ,
+      filebrowserBrowseUrl : '/ckfinder/ckfinder.html',
+      filebrowserImageBrowseUrl : '/ckfinder/ckfinder.html?type=Images',
+      filebrowserFlashBrowseUrl : '/ckfinder/ckfinder.html?type=Flash',
+      filebrowserUploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+      filebrowserImageUploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+      filebrowserFlashUploadUrl : '/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
+    });
+
+//]]>
+</script>

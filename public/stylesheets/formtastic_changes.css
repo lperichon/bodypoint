@@ -20,3 +20,7 @@ form.formtastic fieldset ol li {
 form.formtastic fieldset ol li.text .cke_editor_post_body {
   display: inline-block;
 }
+
+form.formtastic fieldset ol li.text .cke_editor_activity_description {
+  display: inline-block;
+}
