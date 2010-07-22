@@ -267,3 +267,25 @@ body {
   margin-left: 18px;
   background-image: url('/images/logogris.png');
 }
+
+.schedule {
+    border: 2px solid black;
+    text-align: center;
+
+}
+
+.time {
+    width: 70px;
+    border: 1px solid black;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    vertical-align: middle;
+}
+
+.day-of-week {
+    width: 150px;
+    border: 1px solid black;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    vertical-align: middle;
+}

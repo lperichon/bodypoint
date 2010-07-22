@@ -13,25 +13,25 @@
 
   <% locations.each_with_index do |location, idx| %>
     <div id='<%= "tabs-#{idx}" %>'>
-      <table>
+      <table class="schedule">
         <tr>
-          <th>Hora</th>
-          <th>Domingo</th>
-          <th>Lunes</th>
-          <th>Martes</th>
-          <th>Miercoles</th>
-          <th>Jueves</th>
-          <th>Viernes</th>
-          <th>Sabado</th>
+          <th class="time">Hora</th>
+          <th class="day-of-week">Domingo</th>
+          <th class="day-of-week">Lunes</th>
+          <th class="day-of-week">Martes</th>
+          <th class="day-of-week">Miercoles</th>
+          <th class="day-of-week">Jueves</th>
+          <th class="day-of-week">Viernes</th>
+          <th class="day-of-week">Sabado</th>
         </tr>
         <% events_by_hour = location.events.group_by { |e| e.happens_at.hour} %>
         <% (9..20).each do |hour| %>
           <tr>
-            <td><%= "#{"%02d" % hour}:00" %></td>
+            <td class="time"><%= "#{"%02d" % hour}:00" %></td>
             <% if events_by_hour[hour] %>
             <% events_by_dow = events_by_hour[hour].group_by(&:day_of_week) %>
-            <% (0..7).each do |i| %>
-              <td>
+            <% (0..6).each do |i| %>
+              <td class="day-of-week">
                 <% if events_by_dow[i] %>
                   <% events_by_dow[i].each do |event| %>
                     <%= event.activity.name %><br/>
@@ -39,6 +39,10 @@
                 <% end %>
               </td>
             <% end %>
+            <% else %>
+                <% 7.times do %>
+                    <td class="day-of-week"></td>
+                <% end %>
             <% end %>
           </tr>
         <% end %>
