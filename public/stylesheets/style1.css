@@ -2,6 +2,14 @@ body {
 background: #f1f1f1 url(/images/background.jpg) no-repeat;
 }
 
+a {
+  color: #ff4e00;
+}
+
+a:hover {
+  color: red;
+}
+
 #header_zone {
 	width: 956px;
 	height: 90px;
@@ -50,6 +58,11 @@ background: #f1f1f1 url(/images/background.jpg) no-repeat;
 	width:237px;
 	height:346px;
 	margin-bottom:18px;
+}
+
+#news_frame a {
+    font-weight: bold;
+    text-decoration: none;
 }
 
 #news_header {
