@@ -2,7 +2,7 @@
   <% f.inputs do %>
     <%= f.input :login %>
     <%= f.input :password %>
-    <%= f.input :remember_me, :as => :boolean %>
+    <%= f.input :remember_me, :as => :boolean, :required => false %>
   <% end %>
   <%= f.buttons %>
 <% end %>
